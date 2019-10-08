@@ -9,3 +9,13 @@ This RFID reader for 125 kHz reads the 12 bits on any matching card and displays
 (picture)
 
 ## NFC
+
+Reader for NFC tags, maybe with ndef extention. It is RFID at 13.56 MHz due to the high frequency able to transmit more data - usually 1 kByte. We show the first 80 Byte on our 2004 display.
+
+## Ultrasonic
+
+## AQI
+
+## Pressure and temperature
+
+BMP180.
