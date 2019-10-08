@@ -12,7 +12,7 @@ int y = 0;
 
 int tag1[14] = {2,48,49,48,70,65,66,49,70,52,50,70,55,3}; //mk
 int tag2[14] = {2,50,49,48,48,50,52,53,69,56,68,68,53,3}; //pl
-int tag3[14] = {2,3}; // Katie
+int tag3[14] = {2,3}; // Katie - FAT POTATO
 int tag4[14] = {2,3}; // Luke - Grandmaster of Procrastination
 int newtag[14] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // used for read comparisons
 
@@ -106,7 +106,13 @@ void readTags()
       lcd.print("       FAT      ");
       lcd.setCursor(0, 1);
       lcd.print("      POTATO    ");
-    }    
+    }
+    if (ok == 4) {
+      lcd.setCursor(0, 0);
+      lcd.print(" Grandmaster of ");
+      lcd.setCursor(0, 1);
+      lcd.print("Procrastination ");
+    }
     delay(2000); 
     digitalWrite(LED, LOW);
     lcd.setCursor(0,0);
