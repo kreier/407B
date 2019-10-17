@@ -13,13 +13,13 @@ Look at the map of Ho Chi Minh: https://maps.luftdaten.info/#12/10.7422/106.7044
 
 (picture follows) of our indoor sensor with display for the students ...
 
-PM2.5 and PM10 https://www.madavi.de/sensor/graph.php?sensor=esp8266-8808591-sds011 
-Humidity and Temperature: https://www.madavi.de/sensor/graph.php?sensor=esp8266-8808591-dht 
+- PM2.5 and PM10 https://www.madavi.de/sensor/graph.php?sensor=esp8266-8808591-sds011 
+- Humidity and Temperature: https://www.madavi.de/sensor/graph.php?sensor=esp8266-8808591-dht 
 
 ## Outdoor sensor 
 
 This is the sensor outdoor: 
 
-PM2.5 and PM10 https://www.madavi.de/sensor/graph.php?sensor=esp8266-12779556-sds011 
-Humidity and Temperature: https://www.madavi.de/sensor/graph.php?sensor=esp8266-12779556-dht 
+- PM2.5 and PM10 https://www.madavi.de/sensor/graph.php?sensor=esp8266-12779556-sds011 
+- Humidity and Temperature: https://www.madavi.de/sensor/graph.php?sensor=esp8266-12779556-dht 
 
