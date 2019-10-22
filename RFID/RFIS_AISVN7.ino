@@ -18,8 +18,8 @@ boolean show_uptime = false;
 
 int tag1[14] = {2,48,49,48,70,65,66,49,70,52,50,70,55,3}; //mk
 int tag2[14] = {2,50,49,48,48,50,52,53,69,56,68,68,53,3}; //pl
-int tag3[14] = {2,3}; // Katie - FAT POTATO
-int tag4[14] = {2,3}; // Luke - Grandmaster of Procrastination
+int tag3[14] = {2,50,49,48,48,50,52,52,54,55,56,51,65,3}; // Katie - FAT POTATO
+int tag4[14] = {2,50,49,48,48,50,52,55,70,55,52,48,68,3}; // Luke - Grandmaster of Procrastination
 int newtag[14] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // used for read comparisons
 
 hd44780_I2Cexp lcd; // declare lcd object: auto locate & config display for hd44780 chip
@@ -83,8 +83,8 @@ void readTags()
       data1 = RFID.read();
       newtag[z] = data1;
     }
-    RFID.flush(); // stops multiple reads
-
+    while(RFID.read() != -1) { }   // prevent double readings
+ 
     // do the tags match up?
     checkmytags();
   }
@@ -130,6 +130,18 @@ void readTags()
   }
   else if (ok == 0) // if we didn't have a match
   {
+    Serial.print("ID read: ");
+    // clear lcd
+    lcd.clear();
+    lcd.setCursor(2, 0);
+    for (int z = 1 ; z < 14 ; z++) // print card id
+    {
+      Serial.print(newtag[z]);
+      lcd.print(newtag[z]);
+      if(z == 6) {
+        lcd.setCursor(2, 1);
+      }
+    }
     Serial.println(" - Rejected");    
     for (int z = 0 ; z < 50 ; z++) // blink for 5 seconds
     {
@@ -137,7 +149,7 @@ void readTags()
          delay(50);
          digitalWrite(LED, LOW);
          delay(50);
-    }           
+    }          
     lcd.setCursor(0,0);
     lcd.print("Place your IDtag");
     while(RFID.read() != -1) { }   // prevent double readings
