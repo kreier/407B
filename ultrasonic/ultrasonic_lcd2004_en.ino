@@ -49,7 +49,10 @@ void uptime() {
     time = millis();
     rollover++;
   }
-  runtime = 4294967*rollover + millis()/1000;
+  runtime = 4294967*rollover + time/1000;
+  //lcd.setCursor(0,1);
+  //lcd.print(runtime);
+  //lcd.print("  ");
   days = runtime / 86400;
   hours = (runtime - days*86400) / 3600;
   minutes = (runtime - days*86400 - hours*3600) / 60;
@@ -64,6 +67,7 @@ void uptime() {
   lcd.print(":");
   print2dig(seconds);
   lcd.print(" ");
+  time = millis();
 }
 
 void distance() {
