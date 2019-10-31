@@ -16,8 +16,8 @@ int DistanceCm;
 unsigned long time; // runs over after 4294967295 milliseconds or 49days 17:02:47.295
 unsigned long runtime; // seconds this system actually runs
 int rollover = 0;
-int days = 0;
-int hours = 0;
+long days = 0;
+long hours = 0; // if int it causes an overflow after 32768/3600 = 9.1 hours
 int minutes = 0;
 int seconds = 0;
 char block = 255;
