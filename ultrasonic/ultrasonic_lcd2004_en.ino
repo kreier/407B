@@ -45,7 +45,7 @@ void setup()
 }
 
 void uptime() {
-  if( millis() - time < 0 ) { // rollover happened after unsigned long 4294967295 milliseconds = 49.71 days
+  if( millis() < time ) { // rollover happened after unsigned long 4294967295 milliseconds = 49.71 days
     time = millis();
     rollover++;
   }
