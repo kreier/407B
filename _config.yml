@@ -1,1 +1,6 @@
 theme: jekyll-theme-slate
+
+title: Experiments in front of 407B
+description: From RFID, NFC to ultrasonic and AQI
+
+show_downloads: true
